@@ -2,8 +2,12 @@ dep 'unrar', :template => 'bin' do
   installs {
 	via :brew, "unrar"
   }
+end
 
-  provides []
+dep 'vim', :template => 'bin' do
+  installs {
+	via :brew, "vim"
+  }
 end
 
 dep "z-jump" do
