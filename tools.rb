@@ -10,12 +10,6 @@ dep 'ack', :template => 'bin' do
   }
 end
 
-dep 'gradle', :template => 'bin' do
-  installs {
-	via :brew, "gradle"
-  }
-end
-
 dep 'vim', :template => 'bin' do
   installs {
 	via :brew, "vim"
