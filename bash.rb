@@ -4,6 +4,7 @@ dep "env" do
   requires 'unrar'
   requires 'z-jump'
   requires 'dotfiles'
+  requires 'ack'
 end
 
 dep "dotfiles" do
