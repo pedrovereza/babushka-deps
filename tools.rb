@@ -4,9 +4,9 @@ dep 'unrar', :template => 'bin' do
   }
 end
 
-dep 'ack', :template => 'bin' do
+dep 'ag', :template => 'bin' do
   installs {
-	via :brew, "ack"
+	via :brew, "ag"
   }
 end
 
