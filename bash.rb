@@ -1,10 +1,8 @@
 include Babushka::ShellHelpers
 
 dep "env" do
-  requires 'unrar'
-  requires 'z-jump'
-  requires 'dotfiles'
-  requires 'ag'
+ requires 'dotfiles'
+ requires 'tools'
 end
 
 dep "dotfiles" do
