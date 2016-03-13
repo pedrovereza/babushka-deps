@@ -1,3 +1,7 @@
+dep  '1Password.app' do
+  source 'https://d13itkw33a7sus.cloudfront.net/dist/1P/mac4/1Password-6.1.zip'
+end
+
 dep  'Chrome.app' do
   source 'https://dl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg'
 end
