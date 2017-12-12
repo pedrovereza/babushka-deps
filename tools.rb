@@ -25,12 +25,6 @@ dep 'ag', :template => 'bin' do
   }
 end
 
-dep 'vim', :template => 'bin' do
-  installs {
-    via :brew, "vim"
-  }
-end
-
 dep "z-jump" do
   met? {
     '~/tools/z'.p.directory?
@@ -48,5 +42,33 @@ dep "giffy" do
 
   meet {
 	shell('git clone https://github.com/pedrovereza/giffy.git ~/tools/giffy')
+  }
+end
+
+dep vim do
+  requires 'vim-install'
+  requires 'vimfiles'
+end
+
+dep 'vim-install' do
+  met? {
+    '/usr/local/Cellar/vim'.p.directory?
+  }
+
+  meet {
+    shell('brew install vim')
+  }
+end
+
+dep 'vimfiles' do
+  met? {
+    '~/.vim'.p.directory?
+  }
+
+  meet {
+    shell('git clone https://github.com/pedrovereza/vimfiles.git ~/.vim')
+    shell('ln -s ~/.vim/vimrc ~/.vimrc')
+    shell('vim -S <(echo -e "BundleInstall \n q \n q")')
+    shell('open Monaco-Powerline.otf')
   }
 end
