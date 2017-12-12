@@ -9,23 +9,23 @@ end
 
 dep 'unrar', :template => 'bin' do
   installs {
-    via :brew, "unrar"
+    via :brew, 'unrar'
   }
 end
 
 dep 'git-crypt', :template => 'bin' do
   installs {
-    via :brew, "git-crypt"
+    via :brew, 'git-crypt'
   }
 end
 
 dep 'ag', :template => 'bin' do
   installs {
-    via :brew, "ag"
+    via :brew, 'ag'
   }
 end
 
-dep "z-jump" do
+dep 'z-jump' do
   met? {
     '~/tools/z'.p.directory?
   }
@@ -35,7 +35,7 @@ dep "z-jump" do
   }
 end
 
-dep "giffy" do
+dep 'giffy' do
   met? {
 	'~/tools/giffy'.p.directory?
   }
@@ -45,7 +45,7 @@ dep "giffy" do
   }
 end
 
-dep vim do
+dep 'vim' do
   requires 'vim-install'
   requires 'vimfiles'
 end
