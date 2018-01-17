@@ -5,6 +5,7 @@ dep 'tools' do
   requires 'vim'
   requires 'z-jump'
   requires 'giffy'
+  requires 'lorem'
 end
 
 dep 'unrar', :template => 'bin' do
@@ -42,6 +43,16 @@ dep 'giffy' do
 
   meet {
 	shell('git clone https://github.com/pedrovereza/giffy.git ~/tools/giffy')
+  }
+end
+
+dep 'lorem' do
+  met? {
+    '~/tools/lorem'.p.directory?
+  }
+
+  meet {
+    shell('git clone https://github.com/pedrovereza/lorem.git ~/tools/lorem')
   }
 end
 
