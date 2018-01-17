@@ -38,11 +38,11 @@ end
 
 dep 'giffy' do
   met? {
-	'~/tools/giffy'.p.directory?
+    '~/tools/giffy'.p.directory?
   }
 
   meet {
-	shell('git clone https://github.com/pedrovereza/giffy.git ~/tools/giffy')
+    shell('git clone https://github.com/pedrovereza/giffy.git ~/tools/giffy')
   }
 end
 
